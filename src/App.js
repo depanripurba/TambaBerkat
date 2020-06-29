@@ -1,8 +1,12 @@
 import React from 'react';
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Home from "./componen/Home";
 
 function App() {
   return ( 
-    <h1>Selamat datang di tokonline</h1>
+  	<Router>
+     <Route path="/" component={Home} />
+    </Router>
   );
 }
 
