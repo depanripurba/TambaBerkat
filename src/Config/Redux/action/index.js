@@ -11,6 +11,10 @@ export const datauser = (value)=>(dispatch)=>{
     dispatch({type:'UBAHDATAUSER',value:value})
 }
 
+export const url = (value)=>(dispatch)=>{
+    dispatch({type:'UBAHURL',value:value})
+}
+
 export const updatekontak = (value)=>(dispatch)=>{
   const starCountRef = firebase.database().ref('users/' + value )
   return new Promise((resolve,reject)=>{
@@ -23,6 +27,6 @@ export const updatekontak = (value)=>(dispatch)=>{
   })
 }
 
-export const updatestatuschat = (value)=>(dispatch)=>{
-    dispatch({type:'UBAHSTATUSCHAT',value:value})
+export const ubahprogres = (value)=>(dispatch)=>{
+    dispatch({type:'UBAHPROGRES',value:value})
 }
