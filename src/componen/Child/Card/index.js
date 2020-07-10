@@ -1,24 +1,18 @@
-import React, {Fragment} from "react";
-import firebase from "../../../Config/Firebase"
-import ChildCard from "./ChildCard.js"
-import {connect} from "react-redux"
-const Index = (props)=>{
-const tes = [1,2]
+import React from 'react';
+const Index = ({e}) => {
+  return (
 
-	return(
-		<Fragment>
-        {props.dataurl.map((result)=>{
-            return( 
-                <ChildCard cek = {result} />
-                )
-        })}
-		</Fragment>
-		)
-}
+    <div className="card col-sm-4" style={{width:"18rem"}} >
+    {console.log(e)}
+        <img src={e.hasil.url} className="card-img-top" alt="..." />
+        <div className="card-body">
+          <h5 className="card-title"> {e.hasil.namabarang} </h5>
+          <p className="card-text"> {`Harganya Rp. ${e.hasil.hargabarang} `} </p>
+          <p className="card-text"> {`Stok tersedia ${e.hasil.stok} `} </p>
+          <button className="btn btn-primary">Beli</button>
+        </div>
+  </div>
+  );
+};
 
-const data = (state)=>{
-  return{
-    dataurl : state.urlimg
-  }
-}
-export default connect(data,null)(Index);
+export default Index;

@@ -15,12 +15,20 @@ export const url = (value)=>(dispatch)=>{
     dispatch({type:'UBAHURL',value:value})
 }
 
-export const updatekontak = (value)=>(dispatch)=>{
-  const starCountRef = firebase.database().ref('users/' + value )
+export const updatedatabarang = (value)=>(dispatch)=>{
+  const starCountRef = firebase.database().ref('barang/')
   return new Promise((resolve,reject)=>{
       starCountRef.on('value', (snapshot)=> {
-        resolve(snapshot.val().teman)
-        dispatch({type:'UPDATEKONTAK',value:snapshot.val().teman})
+        const datalengkap = []
+        const data  = Object.keys(snapshot.val())
+        data.map((id)=>{
+          datalengkap.push({
+            key:id,
+            hasil:snapshot.val()[id]
+          })
+        })
+        resolve(datalengkap)
+        dispatch({type:'UPDATEDATABARANG',value:datalengkap})
       })
   }).then((result)=>{
     console.log(result)

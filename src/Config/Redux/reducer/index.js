@@ -1,6 +1,7 @@
 const globalState = {
  progres:"o%",
- urlimg:[]
+ urlimg:[],
+ barang:[]
 }
 export const Reducer = (state=globalState,action)=>{
 
@@ -8,6 +9,12 @@ export const Reducer = (state=globalState,action)=>{
     return{
       ...state,
       progres : action.value
+    }
+  }
+  if(action.type === 'UPDATEDATABARANG'){
+    return{
+      ...state,
+      barang : action.value
     }
   }
 

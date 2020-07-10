@@ -2,29 +2,40 @@ import React from "react";
 import Header from "../Child/Header"
 import Card from "../Child/Card"
 import {connect} from "react-redux"
+import {updatedatabarang} from '../../Config/Redux'
 class Index extends React.Component{
 componentDidMount(){
-	console.log(this.props.dataurl)
+	this.props.upbarang()
+	console.log("hai nama saya depanri purba, senang bertemu dengan kalian semua kawan kawan")
 }
   render(){
     return (
     	<div>
 		<Header />
 		<div className="container">
+		<div className ="row">
 		{
-			console.log(this.props.dataurl)
+			this.props.barang.map((result)=>{
+				return(<Card e={result} />)
+			})
 		}
-		<Card />
+		</div>
 		</div>
 		</div>
     )
 }
 }
 
-const data = (state)=>{
+ const method = (dispatch)=>{
   return{
-    dataurl : state.urlimg
+    upbarang:(value)=>dispatch(updatedatabarang(value)),
   }
 }
-export default connect(data,null)(Index);
+ 
+const data = (state)=>{
+  return{
+    barang : state.barang
+  }
+}
+export default connect(data,method)(Index);
 
