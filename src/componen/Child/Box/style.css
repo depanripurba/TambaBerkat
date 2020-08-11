@@ -1,0 +1,61 @@
+.Kotak{
+	display: grid;
+	border:3px solid blue;
+	grid-template-rows: 50px auto;
+	background: aqua;
+	border-radius:20px;
+	padding:5px;
+	cursor:pointer;
+	box-shadow: 2px 2px 10px 4px #F9EBEB;
+	transition: 1s;
+}
+.satu{
+	align-self: center;
+	font-size: 14px;
+	font-weight: bold;
+	border-bottom: 3px solid blue;
+	margin-left: -3px;
+	width: 110px;
+	color:rgb(102,102,102);
+}
+.dua{
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+}
+.duasatu{
+	display: grid;
+	grid-template-rows: 30px auto;
+}
+.duasatudua{
+	display: grid;
+}
+table{
+	font-size:14px;
+}
+.anakjudul{
+	color: #D2EAE4;
+	border-radius: 10px;
+	background:blue;
+	text-align: center;
+}
+.Harga{
+	border-radius: 10px;
+	background: white;
+	margin-top:10px;
+	transition: 0.2s;
+}
+.Merah td{
+	color:red;
+}
+.beda{
+	margin-bottom:10px;
+}
+.Kotak:hover{
+	box-shadow: 2px 2px 10px 4px #312E2E;
+}
+.Harga:hover{
+	transform: scale(1.2,1.2);
+	border-radius:1px;
+	
+	
+}

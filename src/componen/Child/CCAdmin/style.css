@@ -1,0 +1,34 @@
+.CCChat{
+	border: 1px solid black;
+	width: 1300px;
+	height: 580px;
+	background: green;
+	margin: auto;
+	margin-top: 20px;
+	display: grid;
+	grid-template-columns: 300px auto;
+	grid-gap: 30px;
+	padding: 10px;
+	border-radius: 20px;
+}
+.daftarpelanggan{
+	background: white;
+	border-radius: 20px;
+	display: grid;
+	grid-template-rows: 50px auto;
+}
+.chatdenganpelanggan{
+	background: white;
+	border-radius: 20px;
+	display: grid;
+	grid-template-rows: 50px auto;
+
+}
+.antrian{
+	border: 1px solid aqua;
+	background : aqua;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	text-align: center;
+	padding: 10px;
+}

@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../Child/Header"
 import Card from "../Child/Card"
+import Footer from "../Child/Footer"
 import {connect} from "react-redux"
 import {updatedatabarang} from '../../Config/Redux'
 class Index extends React.Component{
@@ -21,6 +22,7 @@ componentDidMount(){
 		}
 		</div>
 		</div>
+		<Footer />
 		</div>
     )
 }

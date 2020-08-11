@@ -1,34 +1,42 @@
-import React,{Fragment} from "react";
 import {NavLink} from "react-router-dom"
-const Index = ()=>{
-  return(
-    <Fragment>
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-    <NavLink className="navbar-brand" exact to="/">Navbar</NavLink>
-     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span className="navbar-toggler-icon"></span>
-  </button>
-  <div className="collapse navbar-collapse" id="navbarNav">
-    <ul className="navbar-nav">
-      <li className="nav-item active">
-        <NavLink className="nav-link" exact to="/">Home <span className="sr-only">(current)</span></NavLink>
-      </li>
-      <li className="nav-item">
-        <NavLink className="nav-link" to="/upload">Upload</NavLink>
-      </li>
-         <li className="nav-item">
-             <NavLink className="nav-link" to="#">Pricing</NavLink>
-         </li>
-          <li className="nav-item">
-             <NavLink className="nav-link disabled" to="#" tabindex="-1" aria-disabled="true">Disabled</NavLink>
-            </li>
-        </ul>
-        </div>
-      </nav>
-    </Fragment>
-    )
+import React, { useState } from 'react';
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+  NavbarText
+} from 'reactstrap';
+
+const Example = (props) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = () => setIsOpen(!isOpen);
+
+  return (
+    <div>
+      <Navbar color="primary" light expand="md">
+        <NavLink className="nav-link text-white" to="/">Tamba Berkat</NavLink>
+        <NavbarToggler onClick={toggle} />
+        <Collapse isOpen={isOpen} navbar>
+          <Nav className="mr-auto" navbar>
+            <NavItem>
+              <NavLink className="nav-link text-white" to="/components/">Components</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink className="nav-link text-white" to="/upload">GitHub</NavLink>
+            </NavItem>
+          </Nav>
+        </Collapse>
+      </Navbar>
+    </div>
+  );
 }
-export default Index;
 
-
-
+export default Example;

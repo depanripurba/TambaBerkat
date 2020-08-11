@@ -1,7 +1,9 @@
 const globalState = {
  progres:"o%",
  urlimg:[],
- barang:[]
+ barang:[],
+ chat:[],
+ iduser:''
 }
 export const Reducer = (state=globalState,action)=>{
 
@@ -15,6 +17,20 @@ export const Reducer = (state=globalState,action)=>{
     return{
       ...state,
       barang : action.value
+    }
+  }
+
+  if(action.type === 'UPDATEUSERID'){
+    return{
+      ...state,
+      iduser : action.value
+    }
+  }
+
+  if(action.type === 'UPDATECHAT'){
+    return{
+      ...state,
+      chat : action.value
     }
   }
 
