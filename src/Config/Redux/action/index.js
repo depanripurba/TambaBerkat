@@ -4,7 +4,8 @@ export const ubahuser = (user)=>(dispatch)=>{
 }
 
 export const updatechat = (value)=>(dispatch)=>{
-  const starCountRef = firebase.database().ref('chat/')
+  let useridbaru = localStorage.getItem('user')
+  const starCountRef = firebase.database().ref('chat/' + useridbaru)
   return new Promise((resolve,reject)=>{
       starCountRef.on('value', (snapshot)=> {
         if(snapshot.val() === null){
@@ -30,6 +31,25 @@ export const updatechat = (value)=>(dispatch)=>{
   })
 }
 
+export const listuser = (value)=>(dispatch)=>{
+  const starCountRef = firebase.database().ref('chat/')
+  return new Promise((resolve,reject)=>{
+      starCountRef.on('value', (snapshot)=> {
+        if(snapshot.val() === null){
+
+        }else{
+          const data  = Object.keys(snapshot.val())
+        resolve(data)
+        dispatch({type:'LISTUSER',value:data})
+        }
+        
+      })
+  }).then((result)=>{
+    console.log(result)
+    console.log("INI AKAN DI TAMPILKAN SAAT ANDA MEMBUKA CHAT ADMIN")
+  })
+}
+
 export const userid = (value)=>(dispatch)=>{
   const starCountRef = firebase.database().ref('chat/')
   return new Promise((resolve,reject)=>{
@@ -41,8 +61,9 @@ export const userid = (value)=>(dispatch)=>{
           const data  = Object.keys(snapshot.val())
           resolve('TES')
           console.log(data.length)
-          dispatch({type:'UPDATEUSERID',value:'user' + data.length})
-          localStorage.setItem("user", 'user' + data.length);
+          let Millisecond = new Date().getMilliseconds();
+          dispatch({type:'UPDATEUSERID',value:'user' + data.length + Millisecond})
+          localStorage.setItem("user", 'user' + data.length + Millisecond);
         }
         
       })
@@ -55,6 +76,10 @@ export const userid = (value)=>(dispatch)=>{
 
 export const datauser = (value)=>(dispatch)=>{
     dispatch({type:'UBAHDATAUSER',value:value})
+}
+
+export const tetapkan = (value)=>(dispatch)=>{
+    dispatch({type:'USERMASIHADA',value:value})
 }
 
 export const url = (value)=>(dispatch)=>{

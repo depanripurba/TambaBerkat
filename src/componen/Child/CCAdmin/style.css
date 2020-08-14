@@ -21,7 +21,7 @@
 	background: white;
 	border-radius: 20px;
 	display: grid;
-	grid-template-rows: 50px auto;
+	grid-template-rows: 50px auto 50px;
 
 }
 .antrian{
@@ -31,4 +31,32 @@
 	border-top-right-radius: 10px;
 	text-align: center;
 	padding: 10px;
+}
+.kotakpelanggan{
+	border: 2px solid red;
+	padding: 10px;
+}
+.kotakpelanggan:hover{
+	cursor: pointer;
+
+}
+.inputanadmin{
+	border-radius: 10px;
+	width: 800px;
+	outline-color: none;
+	outline-style: none;
+	border: 2px solid #ED2F2F;
+
+}
+.clip{
+	cursor: pointer;
+	color: #ED2F2F;
+	margin: 10px;
+}
+
+.paper{
+	font-size: 20px;
+}
+.sender{
+	font-size: 30px;
 }

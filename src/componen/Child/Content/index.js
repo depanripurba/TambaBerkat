@@ -1,6 +1,7 @@
 import React from "react";
 import Kotak from "../Box"
 import CChat from "../CChat"
+import firebase from '../../../Config/Firebase'
 import {NavLink} from "react-router-dom"
 import { FaPaperclip } from "react-icons/fa";
 import { AiOutlineSend } from "react-icons/ai";
@@ -10,19 +11,29 @@ import "./style.css"
 class Index extends React.Component{
 
   state = {
-    pesan:''
+    pesan:'',
+    useridbaru:''
   }
   componentDidMount(){
-    console.log(this.state.baru )
+    console.log(this.state.useridbaru)
   }
+  // bagian upload ke realtime database firebase
+    realtimedatabase = (e)=>{
+    const database = firebase.database()
+    let useridbaru = localStorage.getItem('user')
+     database.ref('chat/' + useridbaru).push({
+          pesan: this.state.pesan
+        })
+  }
+  // akhir bagian upload ke realtime database
   change = (e)=>{
-    if(e.key === 'Enter'){
-    console.log('anda sudah menekan tombol enter' + this.props.iduser)
-    }
     this.setState({
-      pesan: e.target.value
+      [e.target.name] :  e.target.value
     })
-    console.log(this.state)
+    if(e.key === 'Enter'){
+    console.log('anda sudah menekan tombol enter' + this.props.useridyangasli)
+    this.realtimedatabase()
+    }
   }
  
 render(){
@@ -64,7 +75,7 @@ render(){
             </div>
             <div className="kirisatu bagianinput">
               <div><FaPaperclip className="kirim" /></div>
-              <div><input onKeyPress = {(e)=>this.change(e)} className="input" type="text" placeholder="ketik disini" /></div>
+              <div><input name="pesan" onKeyPress = {(e)=>this.change(e)} className="input" type="text" placeholder="ketik disini" /></div>
               <div><AiOutlineSend className="kirim" /></div>
             </div>
 
@@ -82,7 +93,7 @@ const method = (dispatch)=>{
 const data = (state)=>{
   return{
     login : state.login,
-    iduser : state.iduser,
+    useridyangasli : state.iduser,
     kontak : state.kontak,
     chat: state.chat
   }

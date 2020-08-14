@@ -3,7 +3,8 @@ const globalState = {
  urlimg:[],
  barang:[],
  chat:[],
- iduser:''
+ iduser:'',
+ listuser:[]
 }
 export const Reducer = (state=globalState,action)=>{
 
@@ -27,6 +28,21 @@ export const Reducer = (state=globalState,action)=>{
     }
   }
 
+  if(action.type === 'LISTUSER'){
+    return{
+      ...state,
+      listuser : action.value
+    }
+  }
+
+
+if(action.type === 'USERMASIHADA'){
+    return{
+      ...state,
+      iduser : action.value
+    }
+  }
+  
   if(action.type === 'UPDATECHAT'){
     return{
       ...state,
