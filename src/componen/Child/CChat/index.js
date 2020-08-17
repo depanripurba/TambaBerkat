@@ -3,7 +3,7 @@ import "./style.css"
 class Index extends React.Component{
  
 render(){
-  if(this.props.datachat.hasil.id === 'me'){
+  if(this.props.datachat.hasil.id === 'your'){
     return(
       <div className="me" >
        <div className="orangnya" > {this.props.datachat.hasil.id} </div>

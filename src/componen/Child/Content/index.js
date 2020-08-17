@@ -22,6 +22,7 @@ class Index extends React.Component{
     const database = firebase.database()
     let useridbaru = localStorage.getItem('user')
      database.ref('chat/' + useridbaru).push({
+          id: "me",
           pesan: this.state.pesan
         })
   }
@@ -33,6 +34,7 @@ class Index extends React.Component{
     if(e.key === 'Enter'){
     console.log('anda sudah menekan tombol enter' + this.props.useridyangasli)
     this.realtimedatabase()
+    this.props.upchat(null)
     }
   }
  

@@ -1,11 +1,13 @@
 import React from "react";
 import "./style.css"
 import Kotakpelanggan from '../Kotakpelanggan'
+import Chatdenganpelanggan from '../Chatdenganpelanggan'
 import {listuser} from '../../../Config/Redux'
 import {connect} from 'react-redux'
-import { FaPaperclip } from "react-icons/fa";
-import { AiOutlineSend } from "react-icons/ai";
 class Index extends React.Component{
+state={
+	statuschat:false 
+}
 componentDidMount(){
 	this.props.listeduser(null)
 	console.log(this.props.daftaruser)
@@ -27,16 +29,8 @@ render(){
 
   			</div>
   		</div>
-  		<div className="chatdenganpelanggan" >
-  			<div className="namapelanggan antrian" >PELANGGAN1</div>
-  			<div className="lischat" ></div>
-  			<div className="komponenpengirim" >
-  				<FaPaperclip className="clip paper" />
-  				<input className="inputanadmin" name="pesanadmin" type="text" placeholder="Ketik disini.." />
-  				<AiOutlineSend className="clip sender" />
-  			</div>
-
-  		</div>
+  		<Chatdenganpelanggan ready={this.state.statuschat} />
+  	
   	</div>
   	)
   }
@@ -48,7 +42,8 @@ const method = (dispatch)=>{
 }
 const data = (state)=>{
   return{
-  	daftaruser: state.listuser
+  	daftaruser: state.listuser,
+  	judulchat: state.judulchatadmin
   }
 }
 export default connect(data,method)(Index);

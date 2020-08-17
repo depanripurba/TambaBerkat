@@ -1,0 +1,23 @@
+.gudangchat{
+	margin: 30px;
+	display: grid;
+	grid-template-columns: 50px 400px;
+	grid-column-gap: 20px;
+}
+.gudangchatyou{
+	margin: 30px;
+	display: grid;
+	grid-template-columns: 400px 50px;
+	grid-column-gap: 20px;
+	justify-content: right;
+}
+.a{
+	border: 1px solid green;
+}
+.b{
+	border: 1px solid red;
+	align-self: center;
+	justify-self: left;
+	background: aqua;
+	border-radius: 10px;
+}

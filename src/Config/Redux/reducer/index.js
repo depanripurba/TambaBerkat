@@ -4,7 +4,10 @@ const globalState = {
  barang:[],
  chat:[],
  iduser:'',
- listuser:[]
+ listuser:[],
+ judulchatadmin:"",
+ statuschatadmin:"",
+ listchatadmin:""
 }
 export const Reducer = (state=globalState,action)=>{
 
@@ -18,6 +21,28 @@ export const Reducer = (state=globalState,action)=>{
     return{
       ...state,
       barang : action.value
+    }
+  }
+
+  if(action.type === 'UPDATELISTCHATADMIN'){
+    return{
+      ...state,
+      listchatadmin : action.value
+    }
+  }
+
+    if(action.type === 'UPDATESTATUSCHATADMIN'){
+    return{
+      ...state,
+      statuschatadmin : action.value
+    }
+  }
+
+
+  if(action.type === 'JUDULCHATADMIN'){
+    return{
+      ...state,
+      judulchatadmin : action.value
     }
   }
 

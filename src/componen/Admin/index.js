@@ -12,6 +12,6 @@ render(){
    		<Footer />
    	</div>
   	)
-  }
+  } 
 }
 export default Index;
