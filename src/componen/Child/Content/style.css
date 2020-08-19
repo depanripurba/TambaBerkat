@@ -33,13 +33,18 @@
 .Kiri{
 	background: rgb(204,204,203);
 	border-radius:30px;
-	border-bottom-right-radius: 10px;
-	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 20px;
+	border-bottom-left-radius: 20px;
 	margin-top: 20px;
 	margin-bottom:20px;
 	display: grid;
-	grid-template-rows: 80px auto 30px;
-
+	grid-template-rows: 80px 400px 100px;
+	width: 500px;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 999;
+	box-shadow: 10px 10px 40px orange;
 }
 .Judul{
 	grid-column-start: 1;
@@ -83,42 +88,79 @@ h3{
 	border-top-right-radius: 20px;
 
 }
-.bagianinput{
-	display:grid;
-	grid-template-columns: 20px auto 30px;
+.kasihpadding{
+	padding: 20px;
+	height: auto;
+	overflow: auto;
+	z-index: -999;
+	border-radius: 30px;
 }
-.input{
-	width: 150px;
-	border-radius: 20px;
-	outline-color: white;
-	outline-style: none;
+.bagianinput{
+	padding: auto;
+	display:grid;
+	background: rgb(153,153,153);
+	grid-template-columns: 30px auto 70px;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
 }
 .kirim{
 	cursor: pointer;
+	color: blue;
+	font-size: 20px;
 }
 .me{
 	display: grid;
 	grid-gap: 10px;
-	margin: 10px 5px;
-	grid-template-columns: 20px auto;
+	margin: 5px;
+	grid-template-columns: 20px 300px;
 }
 .orangnya{
-	border: 1px solid black;
+	align-self: center;
 }
 .pesannya{
 	background: blue;
 	padding: 5px;
 	border-radius: 10px;
 	color: white;
+	justify-self: left;
+	
 }
 .your{
 	display: grid;
 	grid-gap: 10px;
 	margin: 10px 5px;
-	grid-template-columns: auto 20px;
+	grid-template-columns: 300px 20px;
+	justify-content: right;
 }
 .pesanmu{
 	background: white;
 	padding: 5px;
 	border-radius: 10px;
+	justify-self: right;
+}
+.tombolchat{
+	color: blue;
+	font-size: 60px;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	cursor: pointer;
+}
+.textarea{
+	width:100%;
+	overflow: hidden;
+	resize: none;
+	padding: 10px;
+	border: 1px solid orange;
+	outline-style: none;
+	border-radius: 20px;	
+}
+.gambarlogo{
+	width: 20px;
+}
+.meratakan{
+	align-self: center;
+}
+.add{
+	justify-self: center;
 }

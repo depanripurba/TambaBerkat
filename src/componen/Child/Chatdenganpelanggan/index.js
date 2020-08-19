@@ -1,33 +1,36 @@
 import React from "react";
-import { FaPaperclip } from "react-icons/fa";
-import { AiOutlineSend } from "react-icons/ai";
+import "./style.css"
+import { FaPaperclip } from "react-icons/fa"
+import { AiOutlineSend } from "react-icons/ai"
 import ChildChatAdmin from "../ChildChatAdmin"
+import firebase from "../../../Config/Firebase"
 import {connect} from 'react-redux'
 class Index extends React.Component{
 	state={
 		pesan:''
 	}
 // awal dari realtime database
-realtimedatabase = (e)=>{
+realtimedatabase = ()=>{
     const database = firebase.database()
-    let useridbaru = localStorage.getItem('user')
+    let useridbaru = this.props.judulchat
      database.ref('chat/' + useridbaru).push({
-          id: "me",
+          id: "your",
           pesan: this.state.pesan
         })
   }
 // akhir dari realtime database
 
-	keypres=()=>{
+	keypres=(e)=>{
 	    if(e.key === 'Enter'){
 	    console.log('anda sudah menekan tombol enter' + this.props.useridyangasli)
 	    this.realtimedatabase()
-	    this.props.upchat(null)
 	    }
 	}
 
-	change=()=>{
-		
+	change=(e)=>{
+		this.setState({
+			[e.target.name] : e.target.value
+		})
 	}
 render(){
   if(this.props.statuschat === true){
@@ -43,7 +46,7 @@ render(){
 	  			</div>
 	  			<div className="komponenpengirim" >
 	  				<FaPaperclip className="clip paper" />
-	  				<input onChange={this.change}  className="inputanadmin" name="pesanadmin" type="text" placeholder="Ketik disini.." />
+						<textarea onChange={(e)=>this.change(e)} onKeyPress={(e)=>this.keypres(e)} name="pesan" type="text" placeholder="Ketik disini.." ></textarea>
 	  				<AiOutlineSend className="clip sender" />
 	  			</div>
 	  	</div>

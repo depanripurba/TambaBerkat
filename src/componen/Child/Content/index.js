@@ -1,12 +1,14 @@
-import React from "react";
+import React, { Fragment} from "react";
 import Kotak from "../Box"
 import CChat from "../CChat"
+import Draggable from 'react-draggable';
 import firebase from '../../../Config/Firebase'
 import {NavLink} from "react-router-dom"
 import { FaPaperclip } from "react-icons/fa";
 import { AiOutlineSend } from "react-icons/ai";
 import {updatechat} from '../../../Config/Redux'
 import {connect} from 'react-redux'
+import {AiFillWechat} from 'react-icons/ai'
 import "./style.css"
 class Index extends React.Component{
 
@@ -27,26 +29,67 @@ class Index extends React.Component{
         })
   }
   // akhir bagian upload ke realtime database
-  change = (e)=>{
-    this.setState({
+
+// bagian untuk mengupdate state
+
+change = (e)=>{
+  this.setState({
       [e.target.name] :  e.target.value
     })
+    e.target.style.height = "auto"
+    e.target.style.height = e.target.scrollHeight + "px" 
+    console.log(e.target.style.height)
+    console.log("ini adalah scrool height" + e.target.scrollHeight)
+}
+// akhir dari bagian update state
+  clicked = (e)=>{
     if(e.key === 'Enter'){
-    console.log('anda sudah menekan tombol enter' + this.props.useridyangasli)
     this.realtimedatabase()
     this.props.upchat(null)
+    e.target.placeholder="ketik disini.."
+    e.target.value = ""
+    e.target.focus()
+    e.target.style.height = "auto"
+    e.preventDefault()
+    console.log(e.target)
     }
   }
  
 render(){
   return (
+    <Fragment>
+      <div className="tombolchat" ><AiFillWechat /></div>
+      <Draggable>
+  			<div className="Kiri">
+            <div className="kirisatu cek">
+              TANYA KAMI
+            </div>
+            <div className="kirisatu kasihpadding">
+                   <div className="me" >
+                      <div className="orangnya" > <img className="gambarlogo" src="./tb.png" alt="logo" /> </div>
+                      <div className="pesannya" > Selamat datang di tamba berkat, ada yang bisa kami bantu </div>
+                    </div>
+                {
+                  this.props.chat.map((result)=>{
+                    return(<CChat datachat = {result} />)
+                  })
+                }
+            </div>
+            <div className="kirisatu bagianinput">
+              <div className="meratakan add"><FaPaperclip className="kirim" /></div>
+              <div className="meratakan"><textarea rows="1" className="textarea" name="pesan" onChange={(e)=>this.change(e)} onKeyPress = {(e)=>this.clicked(e)}  placeholder="ketik disini" />
+              </div>
+              <div className="meratakan" ><AiOutlineSend className="kirim" /></div>
+            </div>
+
+  			</div>
+        </Draggable>
   		<div className="Konten">
           <div className="bungkusKanan">
             <div className="Judul">
                 <h3>Selamat Datang di Tamba Berkat</h3>
                 <center><h4>Melayani : </h4></center>
             </div>
-
           	<div className="Kanan">
           				<Kotak judul="FOTOCOPY" bagian1="1 Sisi" bagian2="Timbal Balik" item1="Fotocopy A3" item2="Fotocopy A4/F4" harga1="Rp.500,-/lbr" harga2="Rp.200,-/lbr" harga3="Rp.1000,-/lbr" harga4="Rp.400,-/lbr" />
           				<Kotak judul="PRINT" bagian1="Hitam putih" bagian2="Warna" item1="Print A3" item2="Print A4/F4" harga1="Rp.1000,-/lbr" harga2="Rp.500,-/lbr" harga3="Relatif Warnanya" harga4="Relatif Warnanya" />
@@ -58,31 +101,9 @@ render(){
             </div>
             <div className="bawah"><NavLink className="Atk" to="/Atk">Atk</NavLink></div>
   			</div>
-  			<div className="Kiri">
-            <div className="kirisatu cek">
-              TANYA KAMI
-            </div>
-            <div className="kirisatu">
-                   <div className="me" >
-                      <div className="orangnya" > Tb </div>
-                      <div className="pesannya" > Selamat datang di tamba berkat, ada yang bisa kami bantu </div>
-                    </div>
-                {
-                  this.props.chat.map((result)=>{
-                    return(<CChat datachat = {result} />)
-                  })
-                }
-
-
-            </div>
-            <div className="kirisatu bagianinput">
-              <div><FaPaperclip className="kirim" /></div>
-              <div><input name="pesan" onKeyPress = {(e)=>this.change(e)} className="input" type="text" placeholder="ketik disini" /></div>
-              <div><AiOutlineSend className="kirim" /></div>
-            </div>
-
-  			</div>
+        
   		</div>
+    </Fragment>
 	)
  }
 }

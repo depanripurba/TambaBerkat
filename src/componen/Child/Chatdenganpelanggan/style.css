@@ -1,0 +1,11 @@
+.lischat{
+    overflow: auto;
+
+}
+.chatdenganpelanggan{
+	background: white;
+	border-radius: 20px;
+	display: grid;
+	grid-template-rows: 50px 400px 50px;
+
+}

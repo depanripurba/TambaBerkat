@@ -3,6 +3,7 @@
 	width: 1300px;
 	height: 580px;
 	background: green;
+	height: auto;
 	margin: auto;
 	margin-top: 20px;
 	display: grid;
@@ -17,13 +18,7 @@
 	display: grid;
 	grid-template-rows: 50px auto;
 }
-.chatdenganpelanggan{
-	background: white;
-	border-radius: 20px;
-	display: grid;
-	grid-template-rows: 50px auto 50px;
 
-}
 .antrian{
 	border: 1px solid aqua;
 	background : aqua;
@@ -33,7 +28,6 @@
 	padding: 10px;
 }
 .kotakpelanggan{
-	border: 2px solid red;
 	padding: 10px;
 }
 .kotakpelanggan:hover{

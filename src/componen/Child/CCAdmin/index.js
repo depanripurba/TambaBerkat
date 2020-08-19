@@ -20,7 +20,7 @@ render(){
   		<div className="daftarpelanggan" >
   			<div className="antrian" >ANTRIAN PELANGGAN</div>
   			<div className="daftarantrian" >
-
+ 
   				 {
                   this.props.daftaruser.map((result)=>{
                     return(<Kotakpelanggan result={result} />)
