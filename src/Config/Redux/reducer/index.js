@@ -7,7 +7,9 @@ const globalState = {
  listuser:[],
  judulchatadmin:"",
  statuschatadmin:"",
- listchatadmin:""
+ listchatadmin:"",
+ loading:"false",
+ kotakchat:false
 }
 export const Reducer = (state=globalState,action)=>{
 
@@ -67,6 +69,20 @@ if(action.type === 'USERMASIHADA'){
       iduser : action.value
     }
   }
+
+  if(action.type === 'UPDATELOADING'){
+    return{
+      ...state,
+      loading : action.value
+    }
+  }
+
+  if(action.type === 'UPDATEKOTAKCHAT'){
+    return{
+      ...state,
+      kotakchat : action.value
+    }
+  }
   
   if(action.type === 'UPDATECHAT'){
     return{
@@ -83,3 +99,4 @@ if(action.type === 'USERMASIHADA'){
   }
   return state
 }
+

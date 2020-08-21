@@ -19,7 +19,7 @@ render(){
   	<div className="CCChat" >
   		<div className="daftarpelanggan" >
   			<div className="antrian" >ANTRIAN PELANGGAN</div>
-  			<div className="daftarantrian" >
+  			<div className="daftarantrian" > 
  
   				 {
                   this.props.daftaruser.map((result)=>{

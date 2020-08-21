@@ -1,4 +1,5 @@
 import React from "react";
+import "./style.css"
 import Header from "../Child/Header"
 import Card from "../Child/Card"
 import Footer from "../Child/Footer"
@@ -7,24 +8,38 @@ import {updatedatabarang} from '../../Config/Redux'
 class Index extends React.Component{
 componentDidMount(){
 	this.props.upbarang()
-	console.log("hai nama saya depanri purba, senang bertemu dengan kalian semua kawan kawan")
 }
   render(){
-    return (
-    	<div>
-		<Header />
-		<div className="container">
-		<div className ="row">
-		{
-			this.props.barang.map((result)=>{
-				return(<Card e={result} />)
-			})
-		}
-		</div>
-		</div>
-		<Footer />
+
+		if(this.props.loading === true){
+				return (
+    <div>
+			<Header />
+			<div className="container">
+				<div className ="row">
+					{
+						this.props.barang.map((result)=>{
+							return(<Card e={result} />)
+						})
+					}
+				</div> 
+			</div>
+			<Footer />
 		</div>
     )
+		}else{
+			return(
+				<div className="loading" >
+				<center className="auto" >
+					<button className="btn btn-primary" type="button" disabled>
+  					<span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+  					Loading...
+					</button>
+				</center>
+				</div>
+			)
+		}
+    
 }
 }
 
@@ -36,7 +51,8 @@ componentDidMount(){
  
 const data = (state)=>{
   return{
-    barang : state.barang
+    barang : state.barang,
+		loading : state.loading
   }
 }
 export default connect(data,method)(Index);

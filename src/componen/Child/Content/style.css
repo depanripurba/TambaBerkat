@@ -45,6 +45,7 @@
 	top: 0;
 	z-index: 999;
 	box-shadow: 10px 10px 40px orange;
+
 }
 .Judul{
 	grid-column-start: 1;
@@ -79,6 +80,8 @@ h3{
 }
 .cek{
 	font-family: algerian;
+	display: grid;
+	grid-template-columns: auto 100px;
 	background: rgb(153,153,153);
 	font-size: 24px;
 	text-align: center;
@@ -163,4 +166,9 @@ h3{
 }
 .add{
 	justify-self: center;
+}
+.close{
+	font-size: 40px;
+	cursor: pointer;
+	color: red;
 }

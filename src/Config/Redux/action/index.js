@@ -74,7 +74,7 @@ export const listuser = (value)=>(dispatch)=>{
     console.log(result)
     console.log("INI AKAN DI TAMPILKAN SAAT ANDA MEMBUKA CHAT ADMIN")
   }) 
-}
+} 
 
 
 export const changelocalstorage = (value)=>{
@@ -136,6 +136,10 @@ export const url = (value)=>(dispatch)=>{
     dispatch({type:'UBAHURL',value:value})
 }
 
+export const tampilkankotakchat = (value)=>(dispatch)=>{
+    dispatch({type:'UPDATEKOTAKCHAT',value:value})
+}
+
 export const updatedatabarang = (value)=>(dispatch)=>{
   const starCountRef = firebase.database().ref('barang/')
   return new Promise((resolve,reject)=>{
@@ -152,7 +156,7 @@ export const updatedatabarang = (value)=>(dispatch)=>{
         dispatch({type:'UPDATEDATABARANG',value:datalengkap})
       })
   }).then((result)=>{
-    console.log(result)
+    dispatch({type:'UPDATELOADING',value:true})
   })
 }
 
