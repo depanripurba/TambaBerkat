@@ -1,5 +1,5 @@
 import React from "react";
-import { FaUserCircle } from "react-icons/fa";
+import intel from "../ChildChatAdmin/icon.png"	
 import "./style.css"
 class Index extends React.Component{
  
@@ -15,7 +15,7 @@ render(){
     return (
       <div className="your" >
         <div className="pesanmu" >{this.props.datachat.hasil.pesan}</div>
-        <div className="orangnya" > <FaUserCircle /></div>
+        <div className="orangnya" > <img className="gambarlogo" src={intel} alt="user icon" /> </div>
     </div>
     )
   }

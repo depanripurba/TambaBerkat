@@ -1,6 +1,5 @@
 import React from 'react'
 import firebase from '../../../Config/Firebase'
-import ScrollToBottom from 'react-scroll-to-bottom'
 import Draggable from 'react-draggable'
 import { AiFillCloseSquare } from "react-icons/ai"
 import { FaPaperclip } from "react-icons/fa"
@@ -15,6 +14,7 @@ class Index extends React.Component{
 state={
     pesan:""
 }
+
 
 realtimedatabase = (e)=>{
     const database = firebase.database()
@@ -43,6 +43,18 @@ tampilkan = ()=>{
     
 }
 
+scrolled = (e)=>{
+
+}
+
+// bagian untuk diload
+  tes = (e)=>{
+    let kotak = document.querySelector(".kasihpadding")
+    console.log("ini adalah tinggi dari scrool dari load " + kotak.scrollHeight)
+    kotak.scrollTo(1,kotak.scrollHeight)
+  }
+//akhir bagian untuk diload
+
 // akhir dari bagian untuk menampilkan kotak
   clicked = (e)=>{
     if(e.key === 'Enter'){
@@ -53,7 +65,6 @@ tampilkan = ()=>{
     e.target.focus()
     e.target.style.height = "auto"
     e.preventDefault()
-    console.log(e.target)
     }
   }
 
@@ -70,8 +81,7 @@ tampilkan = ()=>{
                 <AiFillCloseSquare onClick={this.tampilkan} />
               </div>
             </div>
-            <div className="kirisatu kasihpadding">
-                <ScrollToBottom>
+            <div className="kirisatu kasihpadding" onLoad ={(e)=>this.tes(e)} onScroll = {(e)=>this.scrolled(e)} >
                    <div className="me" >
                       <div className="orangnya" > <img className="gambarlogo" src="./tb.png" alt="logo" /> </div>
                       <div className="pesannya" > Selamat datang di tamba berkat, ada yang bisa kami bantu </div>
@@ -81,7 +91,6 @@ tampilkan = ()=>{
                     return(<CChat datachat = {result} />)
                   })
                 }
-                </ScrollToBottom>
             </div>
             <div className="kirisatu bagianinput">
               <div className="meratakan add"><FaPaperclip className="kirim" /></div>

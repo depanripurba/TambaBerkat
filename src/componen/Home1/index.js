@@ -15,8 +15,6 @@ class Index extends React.Component{
   }else{
     this.props.upchat(null)
   }
-  console.log('ini adalah user idnya' + uidtetap)
-	console.log("Ntah kenapa susah sekali ini")
 }
 
 

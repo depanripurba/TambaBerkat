@@ -1,7 +1,5 @@
 import React from "react";
 import "./style.css"
-import { css } from 'glamor';
-import ScrollToBottom from "react-scroll-to-bottom"
 import { FaPaperclip } from "react-icons/fa"
 import { AiOutlineSend } from "react-icons/ai"
 import ChildChatAdmin from "../ChildChatAdmin"

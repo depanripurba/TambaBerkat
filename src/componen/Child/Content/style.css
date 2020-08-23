@@ -92,8 +92,8 @@ h3{
 
 }
 .kasihpadding{
-	padding: 20px;
-	height: auto;
+	padding: 40px;
+	height: 400px;
 	overflow: auto;
 	z-index: -999;
 	border-radius: 30px;

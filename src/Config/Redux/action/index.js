@@ -11,7 +11,7 @@ export const updatechat = (value)=>(dispatch)=>{
         if(snapshot.val() === null){
 
         }else{
-          console.log(snapshot.val())
+        
           const datalengkap = []
           const data  = Object.keys(snapshot.val())
           data.map((id)=>{
@@ -26,8 +26,7 @@ export const updatechat = (value)=>(dispatch)=>{
         
       })
   }).then((result)=>{
-    console.log(result)
-    console.log("ini adalah hasil yang ingin saya tampilkan")
+    
   })
 }
 
@@ -52,7 +51,7 @@ export const updatelistchatadmin = (value)=>(dispatch)=>{
         
       })
   }).then((result)=>{
-    console.log(result)
+    
     console.log("hai nama saya depanri purba senang bertemu dengan anda ya, saya sangat senang saat ini karena saya sedang senang saja")
   })
 }
@@ -71,7 +70,7 @@ export const listuser = (value)=>(dispatch)=>{
         
       })
   }).then((result)=>{
-    console.log(result)
+    
     console.log("INI AKAN DI TAMPILKAN SAAT ANDA MEMBUKA CHAT ADMIN")
   }) 
 } 
@@ -99,7 +98,7 @@ export const userid = (value)=>(dispatch)=>{
         if(snapshot.val() === null){
 
         }else{
-          console.log(snapshot.val())
+        
           const data  = Object.keys(snapshot.val())
           resolve('TES')
           console.log(data.length)
@@ -110,7 +109,7 @@ export const userid = (value)=>(dispatch)=>{
         
       })
   }).then((result)=>{
-    console.log(result)
+    
     console.log("ini adalah hasil yang ingin saya tampilkan")
   })
 }
