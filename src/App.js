@@ -20,7 +20,17 @@ function App(props) {
 	     <Route path="/chat" component={Chat} />
 	     <Route path="/upload" component={Upload} />
        <Route path="/Atk" component={Home} />
-       <Route path="/Admin" component={Admin} />
+       <Route path="/Admin" render={()=>{
+         if(props.login === true){
+           return(
+             <Admin />
+           )
+         }else{
+           return(
+             <Login />
+           )
+         }
+       }} />
 	     <Route component={Notfound} />
 	     </Switch>
     </Router>
@@ -34,7 +44,8 @@ function App(props) {
 }
 const data = (state)=>{
   return{
-    progres : state.progres
+    progres : state.progres,
+    login: state.login
   }
 }
 export default connect(data,method)(App);

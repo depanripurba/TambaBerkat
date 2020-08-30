@@ -21,7 +21,12 @@ realtimedatabase = (e)=>{
     let useridbaru = localStorage.getItem('user')
      database.ref('chat/' + useridbaru).push({
           id: "me",
-          pesan: this.state.pesan
+          pesan: this.state.pesan,
+          jam: new Date().getHours(),
+          menit:new Date().getMinutes(),
+          tanggal: new Date().getDate(),
+          bulan: new Date().getMonth(),
+          tahun: new Date().getFullYear()
         })
   }
 
@@ -70,7 +75,9 @@ scrolled = (e)=>{
 
 
     render(){
-
+    {
+      console.log(new Date().getHours())
+    }
     if(this.props.kotak === true){
         return(
         <Draggable>

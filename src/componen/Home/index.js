@@ -10,13 +10,13 @@ componentDidMount(){
 	this.props.upbarang()
 }
   render(){
-
+ 
 		if(this.props.loading === true){
 				return (
     <div>
 			<Header />
 			<div className="container">
-				<div className ="row">
+				<div className ="row atas">
 					{
 						this.props.barang.map((result)=>{
 							return(<Card e={result} />)

@@ -9,7 +9,8 @@ const globalState = {
  statuschatadmin:"",
  listchatadmin:"",
  loading:"false",
- kotakchat:false
+ kotakchat:false,
+ login: false
 }
 export const Reducer = (state=globalState,action)=>{
 
@@ -30,6 +31,13 @@ export const Reducer = (state=globalState,action)=>{
     return{
       ...state,
       listchatadmin : action.value
+    }
+  }
+
+  if(action.type === 'CHANGELOGIN'){
+    return{
+      ...state,
+      login : action.value
     }
   }
 

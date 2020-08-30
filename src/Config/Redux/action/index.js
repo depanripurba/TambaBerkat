@@ -119,6 +119,10 @@ export const datauser = (value)=>(dispatch)=>{
     dispatch({type:'UBAHDATAUSER',value:value})
 }
 
+export const ubahlogin = (value)=>(dispatch)=>{
+    dispatch({type:'CHANGELOGIN',value:value})
+}
+
 export const updatejudulchatadmin = (value)=>(dispatch)=>{
     dispatch({type:'JUDULCHATADMIN',value:value})
 }

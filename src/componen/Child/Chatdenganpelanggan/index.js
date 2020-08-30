@@ -19,7 +19,12 @@ realtimedatabase = ()=>{
     let useridbaru = this.props.judulchat
      database.ref('chat/' + useridbaru).push({
           id: "your",
-          pesan: this.state.pesan
+          pesan: this.state.pesan,
+          jam: new Date().getHours(),
+          menit:new Date().getMinutes(),
+          tanggal: new Date().getDate(),
+					bulan: new Date().getMonth(),
+          tahun: new Date().getFullYear()
         })
   }
 // akhir dari realtime database

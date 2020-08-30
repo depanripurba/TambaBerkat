@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+.bodycontainer{
+    background: greenyellow;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+.formcontainer{
+    font-family: 'Quicksand', sans-serif;
+    width: 500px;
+    padding: 20px;
+    border-radius: 20px;
+    margin: auto;
+    margin-top: 100px;  
+    background: white;
+}
+h1{
+    font-family: 'Russo One', sans-serif;
+    color: greenyellow;
+}
+.frmlogin{
+    margin: auto;
+}
+.frmlogin tr td{
+    text-align: center;
+    font-size: 18px;
+}
+.inputbaru{
+    border: none;
+    border-bottom: 1px solid green;
+    outline-style: none;
+    padding: 10px;
+    width: 120%;
+    
+}
+.childcontainer{
+    z-index: 999;
+    font-family: 'Quicksand', sans-serif;
+    margin: auto;
+    width: 80%;
+}
