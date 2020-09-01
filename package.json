@@ -10,7 +10,6 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-draggable": "^4.4.3",
-    "react-helmet": "^6.1.0",
     "react-icons": "^3.10.0",
     "react-redux": "^7.2.0",
     "react-router-dom": "^5.1.2",
@@ -24,8 +23,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "deploy": "yarn build && firebase deploy",
-    "eject": "react-scripts eject",
-    "postbuild": "react-snap"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -42,7 +40,5 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "react-snap": "^1.23.0"
-  }
+  "devDependencies": {}
 }
