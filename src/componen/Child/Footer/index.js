@@ -21,19 +21,19 @@ render(){
     				<tbody>
 	    				<tr>
 	    					<td className="tes"><FaFacebookSquare fontSize="18" fontColor="white" /></td>
-	    					<td className="font tes">Depanri Purba</td>
+	    					<td className="font tes">Tamba Berkat</td>
 	    				</tr>
 	    				<tr>
 	    					<td className="tes"><FaPhoneAlt fontSize="18" fontColor="white" /></td>
-	    					<td className="font tes">081310354312</td>
+	    					<td className="font tes">081 375 664 663</td>
 	    				</tr>
 	    				<tr>
 	    					<td className="tes"><FaWhatsapp fontSize="18" fontColor="white" /></td>
-	    					<td className="font tes">08131034312</td>
+	    					<td className="font tes">081 375 664 663</td>
 	    				</tr>
 	    				<tr>
 	    					<td className="tes"><FaRegEnvelope fontSize="18" fontColor="white" /></td>
-	    					<td className="font tes">depanri.purba@gmail.com</td>
+	    					<td className="font tes">gregotamba0512@gmail.com</td>
 	    				</tr>
     				</tbody>
     			</table>

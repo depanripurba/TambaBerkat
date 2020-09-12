@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./componen/Home";
 import Home1 from "./componen/Home1";
 import Login from "./componen/Login";
+import ChatMobile from "./componen/ChatMobile";
 import Admin from "./componen/Admin";
 import Chat from "./componen/Chat";
 import Upload from "./componen/Upload";
@@ -19,6 +20,7 @@ function App(props) {
 	     <Route path="/login" component={Login} />
 	     <Route path="/chat" component={Chat} />
 	     <Route path="/upload" component={Upload} />
+       <Route path="/ChatMobile" component={ChatMobile} />
        <Route path="/Atk" component={Home} />
        <Route path="/Admin" render={()=>{
          if(props.login === true){

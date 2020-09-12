@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <meta http-equiv="Copyright" content="PERCETAKAN TAMBA BERKAT" />
 	  <meta name="robots" content="index, follow" />
-    <meta name="description" content="PERCETAKAN TAMBA BERKAT" />
+    <meta name="description" content="PERCETAKAN TAMBA BERKAT, Percetakan tamba berkat adalah sebuah percetakan yang berada di Jalan PAM Sunggal Medan Sunggal, Percetakan ini merupakan salah satu percetakan yang dapat dikategorikan percetakan yang bagus" />
     <meta name="keywords" content="PERCETAKAN TAMBA BERKAT" />
 	  <meta name="author" content="PERCETAKAN TAMBA BERKAT" />
 	  <meta name="language" content="Indonesia" />
@@ -18,53 +18,20 @@
 	  <meta name="rating" content="general" />
 	  <meta name="spiders" content="all" />
     <meta name="google-site-verification" content="0A1cTZAKkrxCd6_A9P8ngf4OWkYn8Ur-47o54H0oSlE" />
+    <link rel="manifest" href="./manifest.json"/>
 		<title> PERCETAKAN TAMBA BERKAT  </title>
-		</Helmet>
-			<Header />
-			<div className="container">
-				<div className ="row atas">
-					{
-						this.props.barang.map((result)=>{
-							return(<Card e={result} />)
-						})
-					}
-				</div> 
-			</div>
-
-			<Footer />
-
-
-		</div>
-    )
-		}else{
-			return(
-				<div className="loading" >
-		<Helmet>
-		<meta http-equiv="Copyright" content="PERCETAKAN TAMBA BERKAT" />
-	  <meta name="robots" content="index, follow" />
-    <meta name="description" content="PERCETAKAN TAMBA BERKAT" />
-    <meta name="keywords" content="PERCETAKAN TAMBA BERKAT" />
-	  <meta name="author" content="PERCETAKAN TAMBA BERKAT" />
-	  <meta name="language" content="Indonesia" />
-	  <meta name="revisit-after" content="7" />
-	  <meta name="webcrawlers" content="all" />
-	  <meta name="rating" content="general" />
-	  <meta name="spiders" content="all" />
-    <meta name="google-site-verification" content="0A1cTZAKkrxCd6_A9P8ngf4OWkYn8Ur-47o54H0oSlE" />
-    <title>PERCETAKAN TAMBA BERKAT</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+    <script>
+      if("serviceWorker" in navigator){
+        window.addEventListener("load",()=>{
+          navigator.serviceWorker.register("./serviceWorker.js")
+          .then((reg)=>console.log("berhasil",reg.scope))
+          .catch((err)=>console.log("gagal",err))
+        })
+      }
+    </script>
   </body>
 </html>

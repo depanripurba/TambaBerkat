@@ -80,10 +80,18 @@ scrolled = (e)=>{
     }
     if(this.props.kotak === true){
         return(
-        <Draggable>
-  			<div className="Kiri">
+         <Draggable
+        handle=".handle"
+        defaultPosition={{x: 0, y: 0}}
+        position={null}
+        grid={[1, 1]}
+        scale={1} 
+        onStart={this.handleStart}
+        onDrag={this.handleDrag}
+        onStop={this.handleStop}>
+        <div className="Kiri">
             <div className="kirisatu cek">
-              <div>TANYA KAMI</div>
+              <div className="handle" >TANYA KAMI</div>
               <div className="close">
                 <AiFillCloseSquare onClick={this.tampilkan} />
               </div>
@@ -107,7 +115,7 @@ scrolled = (e)=>{
             </div>
  
   			</div>
-        </Draggable>
+      </Draggable>
         )
         }else{
             return(
@@ -133,3 +141,7 @@ const data = (state)=>{
   }
 }
 export default connect(data,method)(Index);
+
+// <Draggable>
+  			
+//         </Draggable>
