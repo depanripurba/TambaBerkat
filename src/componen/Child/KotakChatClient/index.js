@@ -94,14 +94,14 @@ scrolled = (e)=>{
               <div className="handle" >TANYA KAMI</div>
               <div className="close">
                 <AiFillCloseSquare onClick={this.tampilkan} />
-              </div>
+              </div> 
             </div>
             <div className="kirisatu kasihpadding" onLoad ={(e)=>this.tes(e)} onScroll = {(e)=>this.scrolled(e)} >
                    <div className="me" >
                       <div className="orangnya" > <img className="gambarlogo" src="./tb.png" alt="logo" /> </div>
                       <div className="pesannya" > Selamat datang di tamba berkat, ada yang bisa kami bantu </div>
                     </div>
-                {
+                { 
                   this.props.chat.map((result)=>{
                     return(<CChat datachat = {result} />)
                   })
