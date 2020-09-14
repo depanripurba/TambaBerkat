@@ -22,18 +22,17 @@ componentDidMount(){
 render(){
   if(this.props.datachat.hasil.id === 'your'){
     return(
-      <div className="me" >
-       <div className="orangnya" > <img src="./tb.png" alt="logo" className="gambarlogo" /> </div>
-       <div className="pesannya" > {this.props.datachat.hasil.pesan} </div>
+      <div className="me-chat" >
+       <img src="./tb.png" alt="logo" className="gambarlogotes" />
+        {this.props.datachat.hasil.pesan} 
        <Your waktu = {this.state} />
      </div>
       )
   }else{
     return (
-      <div className="your" >
-        <div className="pesanmu" >{this.props.datachat.hasil.pesan}</div>
-        <div className="orangnya" > <img className="gambarlogo" src={intel} alt="user icon" /> 
-        </div>
+      <div className="your-chat" >
+        {this.props.datachat.hasil.pesan}
+        <img className="gambarlogotes" src={intel} alt="user icon" /> 
         <Me waktu = {this.state}/>
     </div>
     )

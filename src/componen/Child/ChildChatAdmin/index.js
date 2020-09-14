@@ -31,7 +31,7 @@ return(
     		</div> 
 			<Your waktu = {this.state} />
     	</div> 
-    	)
+    	) 
 
 }else{
 	return(

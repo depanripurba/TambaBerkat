@@ -2,10 +2,16 @@ import React, {Fragment} from 'react'
 import firebase from '../../Config/Firebase'
 import {Helmet} from "react-helmet"
 import { FaTelegramPlane } from "react-icons/fa";
+import CChat from "../Child/CChat"
+import ChildChatAdmin from "../Child/ChildChatAdmin"
+import {updatechat} from '../../Config/Redux'
 import "./style.css"
+import {connect} from 'react-redux'
 import gambar from "./tb.png"
 class Index extends React.Component{
-
+    componentDidMount(){
+        this.props.upchat(null)
+    }
     realtimedatabase = (e)=>{
         const database = firebase.database()
         let useridbaru = localStorage.getItem('user')
@@ -18,6 +24,12 @@ class Index extends React.Component{
               bulan: new Date().getMonth(),
               tahun: new Date().getFullYear()
             })
+      }
+
+      tes = (e)=>{
+        let kotak = document.querySelector(".teskoneksi")
+        console.log("ini adalah tinggi dari scrool dari load " + kotak.scrollHeight)
+        kotak.scrollTo(1,kotak.scrollHeight)
       }
 
     change = (e)=>{
@@ -52,28 +64,18 @@ class Index extends React.Component{
                             <div className="online" ><img className="logotb" src={gambar} alt="tamba berkat" /></div>
                             <div className="jarak" >Online</div>
                         </div>
-                        <div className="center-content" >
+                        <div className="center-content teskoneksi" onLoad={(e)=>this.tes(e)} >
                             <div className="me-chat" >
-                            hai 
+                            Selamat datang di forum tanya 
                             </div>
-                            <div className="your-chat" >
-                                tidak ada memang kalau
-                            </div>
-                            <div className="me-chat" >
-                            hai nama saya depanri purba adakan yang bisa saya bantu ? jika ada anda tidak perlu untuk sungkan katakan saja sejujurnya
-                            </div>
-                            <div className="your-chat" >
-                            hai nama saya depanri purba adakan yang bisa saya bantu ? jika ada anda tidak perlu untuk sungkan katakan saja sejujurnya
-                            </div>
-                            <div className="me-chat" >
-                            hai nama saya depanri purba adakan yang bisa saya bantu ? jika ada anda tidak perlu untuk sungkan katakan saja sejujurnya
-                            </div>
-                            <div className="me-chat" >
-                            hai nama saya depanri purba adakan yang bisa saya bantu ? jika ada anda tidak perlu untuk sungkan katakan saja sejujurnya
-                            </div>
-                            <div className="me-chat" >
-                            hai nama saya depanri purba adakan yang bisa saya bantu ? jika ada anda tidak perlu untuk sungkan katakan saja sejujurnya
-                            </div>
+                    {/* bagian untuk mmpolling data pesan dari firebase */}
+                    { 
+                        this.props.chat.map((result)=>{
+                            return(<CChat datachat = {result} />)
+                        })
+                    }
+                    {/* akhir dari polling pesan dari firebase */}
+
                         </div>
                         <div className="bottom-footer" >
                             <textarea rows="1" className="textarea" name="pesan" onChange={(e)=>this.change(e)} onKeyPress = {(e)=>this.clicked(e)}  placeholder="ketik disini" />
@@ -89,4 +91,19 @@ class Index extends React.Component{
         )
 }
 }
-export default Index
+
+const method = (dispatch)=>{
+    return{
+      upchat:(value)=>dispatch(updatechat(value)),
+    }
+  }
+  const data = (state)=>{
+    return{
+      login : state.login,
+      useridyangasli : state.iduser,
+      kontak : state.kontak,
+      chat: state.chat,
+      kotak: state.kotakchat
+    }
+  }
+  export default connect(data,method)(Index);
