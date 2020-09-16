@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+.sisi-kanan{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background:rgb(232, 232, 241);
+    width: 70%;
+}
+.daftar-user-client{
+    padding: 10px;
+    cursor: pointer;
+}
+.sisi-kiri{
+    position: absolute;
+    /* overflow: auto; */
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 30%;
+    background: rgb(221, 221, 224);
+}
+.judul-chat-admin{
+    font-family: 'Fredoka One', cursive;
+    text-align: center;
+    border-bottom: 1px solid rgb(148, 125, 125);
+    color: rgb(134, 88, 88);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 10px;
+}
+.user-icon{
+    width: 20px;
+}
+.bagian-map-chat{
+    display: grid;
+    overflow: auto;
+    position: absolute;
+    top: 15%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.container-tes{
+    background: red;
+}
+
+/* BAGIAN CSS UNTUK MOBILE */
+@media only screen and (max-width: 900px) {
+    .sisi-kiri{
+        width: 100%;
+        z-index: 999;
+    }
+  }

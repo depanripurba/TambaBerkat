@@ -1,15 +1,13 @@
 import React from "react";
 import Header from "../Child/Header"
-import CCAdmin from "../Child/CCAdmin"
+import CCAdmin1 from "../Child/CCadmin1"
 import Footer from "../Child/Footer"
 class Index extends React.Component{
  
 render(){
   return (
   	<div> 
-   		<Header />
-   		<CCAdmin />
-   		<Footer />
+   		<CCAdmin1 />
    	</div>
   	)
   } 

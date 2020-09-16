@@ -23,7 +23,7 @@ function App(props) {
        <Route path="/ChatMobile" component={ChatMobile} />
        <Route path="/Atk" component={Home} />
        <Route path="/Admin" render={()=>{
-         if(props.login === true){
+         if(props.login === false){
            return(
              <Admin />
            )

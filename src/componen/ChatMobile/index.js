@@ -66,7 +66,7 @@ class Index extends React.Component{
                         </div>
                         <div className="center-content teskoneksi" onLoad={(e)=>this.tes(e)} >
                             <div className="me-chat" >
-                            Selamat datang di forum tanya 
+                            Selamat datang di forum tanya jawab, Adakah yang bisa kami bantu ?
                             </div>
                     {/* bagian untuk mmpolling data pesan dari firebase */}
                     { 
