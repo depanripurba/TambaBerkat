@@ -10,6 +10,18 @@
 .daftar-user-client{
     padding: 10px;
     cursor: pointer;
+    display: grid;
+    border-bottom: 1px solid rgb(204, 204, 204);
+    grid-gap: 10px;
+    justify-self: center;
+    align-self: center;
+    grid-template-columns: 1fr 9fr;
+}
+.icon-centering{
+    align-self: center;
+}
+.container-bagian-label{
+    align-self: center;
 }
 .sisi-kiri{
     position: absolute;
@@ -18,7 +30,7 @@
     left: 0;
     bottom: 0;
     width: 30%;
-    background: rgb(221, 221, 224);
+    background: rgb(244, 244, 247);
 }
 .judul-chat-admin{
     font-family: 'Fredoka One', cursive;
@@ -30,7 +42,7 @@
     margin: 10px;
 }
 .user-icon{
-    width: 20px;
+    width: 40px;
 }
 .bagian-map-chat{
     display: grid;
@@ -40,10 +52,17 @@
     left: 0;
     right: 0;
     bottom: 0;
+    background: rgb(234, 236, 236);
+   grid-template-rows: repeat(auto-fit,70px);
 }
 .container-tes{
     background: red;
 }
+
+.daftar-user-client:hover{
+    background:rgb(210, 223, 223) ;
+}
+
 
 /* BAGIAN CSS UNTUK MOBILE */
 @media only screen and (max-width: 900px) {

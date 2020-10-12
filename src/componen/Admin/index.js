@@ -1,7 +1,5 @@
 import React from "react";
-import Header from "../Child/Header"
 import CCAdmin1 from "../Child/CCadmin1"
-import Footer from "../Child/Footer"
 class Index extends React.Component{
  
 render(){
@@ -12,4 +10,4 @@ render(){
   	)
   } 
 }
-export default Index;
+export default Index; 

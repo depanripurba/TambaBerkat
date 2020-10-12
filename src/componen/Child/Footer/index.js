@@ -1,5 +1,6 @@
 import React from "react";
 import './style.css'
+import { Link } from "react-router-dom"
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaPhoneAlt } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa";
@@ -49,6 +50,7 @@ render(){
 	    			</table>
     			</div>
     			<div className="col-sm-4 tes" >Copyright @2020</div>
+				<Link to="/Admin">Admin</Link>
     		</div>
 
     	</div>

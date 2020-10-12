@@ -10,14 +10,21 @@ const globalState = {
  listchatadmin:"",
  loading:"false",
  kotakchat:false,
+ onoffchatadmin:false,
  login: false
 }
 export const Reducer = (state=globalState,action)=>{
-
+ 
   if(action.type === 'UBAHPROGRES'){
     return{
       ...state,
       progres : action.value
+    }
+  }
+  if(action.type === 'OCA'){
+    return{
+      ...state,
+      onoffchatadmin : true
     }
   }
   if(action.type === 'UPDATEDATABARANG'){

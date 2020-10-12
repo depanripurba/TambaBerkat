@@ -2,21 +2,18 @@ import React,{Fragment} from "react";
 import "./style.css"
 import Mytes from "./Pesan"
 import {Helmet} from "react-helmet"
-import { FaTelegramPlane } from "react-icons/fa";
-import Kotakpelanggan from '../Kotakpelanggan'
-import Chatdenganpelanggan from '../Chatdenganpelanggan'
+import Mapuser from "./Map-user"
 import {listuser} from '../../../Config/Redux'
 import {connect} from 'react-redux'
-import tb from "./user.png"
 class Index extends React.Component{
 state={
 	statuschat:false 
-}
+} 
 componentDidMount(){
 	this.props.listeduser(null)
 	console.log(this.props.daftaruser)
 }
-
+ 
 
 render(){
   return (
@@ -32,61 +29,18 @@ render(){
                     </div>
                     <div className="container-tes" >
                         <div className="bagian-map-chat" >
-                            <div className="daftar-user-client" >
-                                <div><img className="user-icon" src={tb} /></div>
-                                <div></div>DEPANRI PURBA
-                                <p>Selamat datang di simulasi</p>
-                            </div>
-                            <div className="daftar-user-client" >
-                                DEPANRI PURBA
-                                <p>Selamat datang di simulasi</p>
-                            </div>
-                            <div className="daftar-user-client" >
-                                DEPANRI PURBA
-                                <p>Selamat datang di simulasi</p>
-                            </div>
-                            <div className="daftar-user-client" >
-                                DEPANRI PURBA
-                                <p>Selamat datang di simulasi</p>
-                            </div>
-                            <div className="daftar-user-client" >
-                                DEPANRI PURBA
-                                <p>Selamat datang di simulasi</p>
-                            </div>
-                            <div className="daftar-user-client" >
-                                DEPANRI PURBA
-                                <p>Selamat datang di simulasi</p>
-                            </div>
-                            <div className="daftar-user-client" >
-                                DEPANRI PURBA
-                                <p>Selamat datang di simulasi</p>
-                            </div>
-                            <div className="daftar-user-client" >
-                                DEPANRI PURBA
-                                <p>Selamat datang di simulasi</p>
-                            </div>
-                            <div className="daftar-user-client" >
-                                DEPANRI PURBA
-                                <p>Selamat datang di simulasi</p>
-                            </div>
-                            <div className="daftar-user-client" >
-                                DEPANRI PURBA
-                                <p>Selamat datang di simulasi</p>
-                            </div>
-                            <div className="daftar-user-client" >
-                                DEPANRI PURBA
-                                <p>Selamat datang di simulasi</p>
-                            </div>
-                            <div className="daftar-user-client" >
-                                DEPANRI PURBA
-                                <p>Selamat datang di simulasi</p>
-                            </div>
+                        { 
+                          this.props.daftaruser.map((result)=>{
+                            return(<Mapuser datachat = {result} />)
+                          })
+                        }
+                            
                         </div>
                         </div>
             </div>
 
             <div className="sisi-kanan" >
-                 <Mytes />
+                  <Mytes />
             </div>
         </div>
     </Fragment>

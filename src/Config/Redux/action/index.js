@@ -27,7 +27,7 @@ export const updatechat = (value)=>(dispatch)=>{
       })
   }).then((result)=>{
     
-  })
+  }) 
 }
 
 export const updatelistchatadmin = (value)=>(dispatch)=>{
@@ -117,6 +117,10 @@ export const userid = (value)=>(dispatch)=>{
 
 export const datauser = (value)=>(dispatch)=>{
     dispatch({type:'UBAHDATAUSER',value:value})
+}
+
+export const upoca = ()=>(dispatch)=>{
+  dispatch({type:'OCA',value:null})
 }
 
 export const ubahlogin = (value)=>(dispatch)=>{
