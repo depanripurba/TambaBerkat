@@ -101,3 +101,75 @@ html,body{
 .containerlog span:hover{
     color: rgb(62, 91, 170);
 }
+.rootheader2{
+    display: grid;
+    margin: 30px;
+    font-family: "Nunito";
+    grid-template-columns: 20% 20% auto 20%;
+    padding-bottom: 30px;
+    border-bottom: 2px solid green;
+}
+.anak1{
+
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+.anak2{
+ 
+    justify-self: center;
+    align-self: center;
+    display: grid;
+}
+.gambar{
+    width: 100%;
+}
+.p1{
+    color:rgb(173, 173, 173);
+    font-size: 16pt;
+}
+.p2{
+    color: rgba(4, 4, 238, 0.781);
+    font-size: 26pt;
+}
+.p3{
+    color:rgb(173, 173, 173);
+    font-size: 14pt;
+}
+.p4{
+    border: 2px solid rgb(3, 204, 204);
+    color: rgb(3, 204, 204);
+    align-self: left;
+    font-weight: bold;
+    justify-self: left;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.p4:hover{
+    color: white;
+    background:rgb(3, 204, 204) ;
+}
+.anak3{
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+.rootheader3{
+    display: grid;
+    margin: 30px;
+    font-family: "Nunito";
+    grid-template-columns: 20% auto 20% 20%;
+    padding-bottom: 30px;
+    border-bottom: 2px solid green;
+}
+.rootheader3 .anak1{
+    display: grid;
+}
+.rootheader4{
+    width: 100%;
+    background: red;
+    font-family: "Nunito";
+}

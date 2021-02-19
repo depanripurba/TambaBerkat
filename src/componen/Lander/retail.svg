@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="270px" height="150px" viewBox="0 0 270 150" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
+    <title>button/business/none-v2</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="pages/index-web" transform="translate(-505.000000, -3040.000000)">
+            <g id="Group-5" transform="translate(205.000000, 2776.000000)">
+                <g id="Group-24">
+                    <g id="Group-28">
+                        <g id="Group-10" transform="translate(0.000000, 84.000000)">
+                            <g id="v2">
+                                <g id="button/business/hover-v2" transform="translate(300.000000, 180.000000)">
+                                    <rect id="Rectangle-2" stroke="#37549C" stroke-width="2" fill="#FFFFFF" x="1" y="1" width="268" height="148" rx="5"></rect>
+                                    <g id="Group-2" stroke-width="1" transform="translate(0.000000, 28.000000)">
+                                        <g id="Group-17" transform="translate(0.000000, 78.000000)" fill="#37549C" font-family="GothamRounded-Medium, Gotham Rounded" font-size="18" font-weight="400" line-spacing="22">
+                                            <g id="Group">
+                                                <text id="Retail">
+                                                    <tspan x="108.517" y="14">Retail</tspan>
+                                                </text>
+                                            </g>
+                                        </g>
+                                        <g id="icon/business/Retail" transform="translate(100.000000, 0.000000)" stroke-linecap="round" stroke-linejoin="round">
+                                            <g id="Retail" transform="translate(4.135021, 3.360000)">
+                                                <path d="M51.5619152,55.0354337 C51.5619152,55.9007349 50.7056962,56.6020843 49.8517245,56.6020843 L12.4724821,56.6020843 C11.6185104,56.6020843 11.0903963,55.9007349 11.0903963,55.0354337 L11.0903963,1.65773494 C11.0903963,0.792433735 11.6185104,0.0910843373 12.4724821,0.0910843373 L49.8517245,0.0910843373 C50.7056962,0.0910843373 51.5619152,0.792433735 51.5619152,1.65773494 L51.5619152,55.0354337 Z" id="Shape" stroke="#37549A" stroke-width="1.86666667"></path>
+                                                <path d="M51.6720327,1.54615663 L61.7129426,16.4202289 C62.2012049,17.1236892 62.0364609,18.0947311 61.3443864,18.5925904 L51.575399,25.6516265" id="Shape" stroke="#37549A" stroke-width="1.86666667"></path>
+                                                <path d="M11.0836544,25.872506 L0.806778573,18.585759 C0.116585646,18.0864716 -0.0469627454,17.1165629 0.440469639,16.4133976 L11.2611906,0.749168675" id="Shape" stroke="#37549A" stroke-width="1.86666667"></path>
+                                                <path d="M38.1186021,0.0910843373 C38.1186021,0.14573494 38.0376995,5.78385542 31.0755825,5.78385542 C24.1134654,5.78385542 24.0460466,0.277807229 24.0460466,0.227710843" id="Shape" stroke="#37549A" stroke-width="1.86666667"></path>
+                                                <path d="M44.1593286,25.7313253 C44.1593286,26.2117332 43.7749801,26.6011837 43.3008622,26.6011837 L35.642084,26.6011837 C35.4140155,26.6017857 35.1950834,26.5104076 35.0336034,26.3472124 C34.8721233,26.1840173 34.7813704,25.9624204 34.7813704,25.7313253 L34.7813704,15.9648072 C34.7813704,15.7337122 34.8721233,15.5121152 35.0336034,15.3489201 C35.1950834,15.1857249 35.4140155,15.0943468 35.642084,15.0949488 L43.3008622,15.0949488 C43.7749801,15.0949488 44.1593286,15.4843993 44.1593286,15.9648072 L44.1593286,25.7313253 Z" id="Shape" stroke="#37549A" stroke-width="1.86666667"></path>
+                                                <path d="M16.6659329,44.941012 L16.6659329,51.3100843" id="Shape" stroke="#0BB6EA" stroke-width="1.86666667"></path>
+                                                <path d="M16.6659329,26.5966265 L16.6659329,40.0497831" id="Shape" stroke="#0BB6EA" stroke-width="1.86666667"></path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

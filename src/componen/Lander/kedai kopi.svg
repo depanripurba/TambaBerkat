@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="270px" height="150px" viewBox="0 0 270 150" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
+    <title>button/business/none-v2</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="pages/index-web" transform="translate(-205.000000, -2860.000000)">
+            <g id="Group-5" transform="translate(205.000000, 2776.000000)">
+                <g id="Group-24">
+                    <g id="Group-28">
+                        <g id="Group-10" transform="translate(0.000000, 84.000000)">
+                            <g id="v2">
+                                <g id="button/business/none-v2">
+                                    <g id="colour/outlines/grey-outline" fill="#FFFFFF" stroke="#CCD4E6">
+                                        <rect id="Rectangle-2" x="0.5" y="0.5" width="269" height="149" rx="5"></rect>
+                                    </g>
+                                    <g id="Group-2" transform="translate(0.000000, 28.000000)">
+                                        <g id="Group-17" transform="translate(0.000000, 74.000000)" fill="#37549C" font-family="GothamRounded-Medium, Gotham Rounded" font-size="18" font-weight="400" line-spacing="22">
+                                            <g id="Group">
+                                                <text id="Retail">
+                                                    <tspan x="85.648" y="14">Kedai Kopi</tspan>
+                                                </text>
+                                            </g>
+                                        </g>
+                                        <g id="icon/business/Coffee-Shop" transform="translate(100.000000, 0.000000)" stroke-linecap="round" stroke-linejoin="round">
+                                            <g id="Coffee-Shop" transform="translate(6.202532, 0.420000)">
+                                                <path d="M49.0358385,34.0780744 C49.0358385,34.0780744 58.7241781,31.3908896 58.2896029,38.7582546 C57.8550277,46.1256196 46.6299941,44.9611729 43.4177215,48.3" id="Shape" stroke="#38569B" stroke-width="1.86666667"></path>
+                                                <path d="M0,55.86 L50.8607595,55.86" id="Shape" stroke="#38569B" stroke-width="1.86666667"></path>
+                                                <polyline id="Shape" stroke="#38569B" stroke-width="1.86666667" points="7.02953586 55.86 9.34809434 62.16 42.7018957 62.16 45.07173 55.86"></polyline>
+                                                <path d="M18.305159,6.72 C18.305159,6.72 14.8502743,10.2597842 17.6083551,14.1870863 C20.3664359,18.1143885 16.5400844,21.84 16.5400844,21.84" id="Shape" stroke="#38569B" stroke-width="1.86666667"></path>
+                                                <path d="M35.260707,6.72 C35.260707,6.72 31.8028732,10.2613765 34.5613698,14.1904453 C37.3198664,18.1195142 33.4953663,21.84 33.4953663,21.84" id="Shape" stroke="#38569B" stroke-width="1.86666667"></path>
+                                                <path d="M26.930685,0 C26.930685,0 22.7810035,4.52399857 26.0915015,9.54402948 C29.4019996,14.5640604 24.8107642,19.32 24.8107642,19.32" id="Shape" stroke="#38569B" stroke-width="1.86666667"></path>
+                                                <path d="M2.89451477,35.28 L15.2995781,35.28" id="Shape" stroke="#0BB6EA" stroke-width="1.86666667"></path>
+                                                <path d="M21.0886076,35.28 L26.464135,35.28" id="Shape" stroke="#0BB6EA" stroke-width="1.86666667"></path>
+                                                <path d="M1.65400844,28.56 L50.0337553,28.56 C50.0337553,28.56 48.9321292,46.2151573 36.8231982,55.86 L14.9989101,55.86 C14.9989101,55.86 3.43855318,46.8689685 1.65400844,28.56 Z" id="Shape" stroke="#38569B" stroke-width="1.86666667"></path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

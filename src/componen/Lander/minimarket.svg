@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="270px" height="150px" viewBox="0 0 270 150" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
+    <title>button/business/none-v2</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="pages/index-web" transform="translate(-805.000000, -3040.000000)">
+            <g id="Group-5" transform="translate(205.000000, 2776.000000)">
+                <g id="Group-24">
+                    <g id="Group-28">
+                        <g id="Group-2" transform="translate(0.000000, 84.000000)">
+                            <g id="Group-10">
+                                <g id="v2">
+                                    <g id="Group" transform="translate(600.000000, 180.000000)">
+                                        <g id="button/business/none-v2">
+                                            <g id="colour/outlines/grey-outline" fill="#FFFFFF" stroke="#CCD4E6">
+                                                <rect id="Rectangle-2" x="0.5" y="0.5" width="269" height="149" rx="5"></rect>
+                                            </g>
+                                            <g id="Group-2" transform="translate(0.000000, 28.000000)">
+                                                <g id="Group-17" transform="translate(0.000000, 74.000000)" fill="#37549C" font-family="GothamRounded-Medium, Gotham Rounded" font-size="18" font-weight="400" line-spacing="22">
+                                                    <g id="Group">
+                                                        <text id="Retail">
+                                                            <tspan x="84.19" y="14">Minimarket</tspan>
+                                                        </text>
+                                                    </g>
+                                                </g>
+                                                <g id="icon/business/Minimarket" transform="translate(100.000000, 0.000000)" stroke-linecap="round" stroke-linejoin="round">
+                                                    <g id="Minimarket" transform="translate(4.135021, 0.420000)">
+                                                        <path d="M9.35087939,6.37452886 L19.5656097,6.37452886" id="Shape" stroke="#0BB6EA" stroke-width="1.86666667"></path>
+                                                        <path d="M23.8582529,6.37452886 L27.225634,6.37452886" id="Shape" stroke="#0BB6EA" stroke-width="1.86666667"></path>
+                                                        <polygon id="Shape" stroke="#38569B" stroke-width="1.86666667" points="0.192421774 19.9454336 61.9372937 19.9454336 49.665288 0.202332886 12.7223545 0.202332886"></polygon>
+                                                        <path d="M47.165852,19.9454336 L0.192421774,19.9454336 C0.192421774,19.9454336 0.2804445,28.7646443 8.84730752,28.7646443 C12.9905168,28.7646443 15.1276267,26.7016832 16.2330284,24.5719732 C17.3589004,26.7016832 19.5082926,28.7646443 23.6617371,28.7646443 C27.8827338,28.7646443 30.0239378,26.6224188 31.1088691,24.4489047 C32.2163178,26.6224188 34.3841334,28.7646443 38.6010361,28.7646443 C42.8179388,28.7646443 44.9468605,26.6349342 46.0379329,24.4697638 C47.1494757,26.6349342 49.3131971,28.7646443 53.5198646,28.7646443 C62.0867277,28.7646443 61.9376328,19.9454336 61.9376328,19.9454336 L47.165852,19.9454336 Z" id="Shape" stroke="#38569B" stroke-width="1.86666667"></path>
+                                                        <polyline id="Shape" stroke="#38569B" stroke-width="1.86666667" points="6.32125997 28.7646443 6.32125997 61.982698 55.1800142 61.982698 55.1800142 28.6436617"></polyline>
+                                                        <path d="M16.2330284,24.5719732 L16.2330284,21.21" id="Shape" stroke="#38569B" stroke-width="2.5432686"></path>
+                                                        <path d="M31.1088691,24.4489047 L31.1088691,21.21" id="Shape" stroke="#38569B" stroke-width="2.5432686"></path>
+                                                        <path d="M46.0379329,24.4697638 L46.0379329,20.79" id="Shape" stroke="#38569B" stroke-width="2.5432686"></path>
+                                                        <path d="M28.3535531,42.9821799 C28.1892564,38.8110328 24.823005,35.5157821 20.7262815,35.5157821 C16.629558,35.5157821 13.2633066,38.8110328 13.0990099,42.9821799 C13.0990099,43.0259839 13.0990099,43.0697879 13.0990099,43.1156779 L13.0990099,60.8166765 C13.1012615,61.4605135 13.6135087,61.9815544 14.2453524,61.982698 L27.225634,61.982698 C27.8571436,61.9815499 28.3688027,61.4601762 28.3699294,60.8166765 L28.3699294,43.1156779 C28.3676183,43.070836 28.3621454,43.0262216 28.3535531,42.9821799 Z" id="Shape" stroke="#38569B" stroke-width="1.86666667"></path>
+                                                        <path d="M38.8596985,38.0907302 L45.8775283,38.0907302 C47.4098285,38.0907302 48.6520032,39.3329049 48.6520032,40.865205 L48.6520032,48.1216326 C48.6520032,49.6539327 47.4098285,50.8961074 45.8775283,50.8961074 L38.8596985,50.8961074 C37.3273984,50.8961074 36.0852237,49.6539327 36.0852237,48.1216326 L36.0852237,40.865205 C36.0852237,39.3329049 37.3273984,38.0907302 38.8596985,38.0907302 Z" id="Rectangle-path" stroke="#38569B" stroke-width="1.86666667"></path>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

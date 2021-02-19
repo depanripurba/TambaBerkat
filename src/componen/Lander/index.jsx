@@ -1,5 +1,6 @@
 import React,{Fragment} from 'react'
 import "./style.css"
+import Gambar from "./fotocopy.jpg"
 
 class Landing extends React.Component{
     render(){
@@ -43,15 +44,33 @@ class Landing extends React.Component{
                     </div>
                 </div>
             </div>
-            <div>
-                <div>
-
+            <div className="rootheader2">
+                <div className="anak1" >
+                    <img className="gambar" src={Gambar} alt=""/>
                 </div>
-                <div>
-                    <span>Tamba Berkat</span>
-                    <span>Merek Foto Copy yang kami gunakan </span>
-                    <span>Foto copy yang kami gunakan adalah fotocopy canon dimana fotocopy ini adalah fotocopy dengan kualitas yang bagus </span>
+                <div className="anak2" >
+                 
+                        <p className="p1" >Moka Point Of Sale</p>
+                        <p className="p2">Catatan anda berantakan ? </p>
+                        <p className="p3">Aplikasi kasir moka menyederhakan proses penjualan usaha anda dan mengelola transaksi lebih efesien </p>
+                        <p className="p4">Pelajari Lebih lanjut</p>
                 </div>
+                
+            </div>
+            <div className="rootheader3">
+                <div className="anak1" >
+                 
+                        <p className="p1" >Moka Point Of Sale</p>
+                        <p className="p2">Catatan anda berantakan ? </p>
+                        <p className="p3">Aplikasi kasir moka menyederhakan proses penjualan usaha anda dan mengelola transaksi lebih efesien </p>
+                        <p className="p4">Pelajari Lebih lanjut</p>
+                </div>
+                <div className="anak2" >
+                    <img className="gambar" src={Gambar} alt=""/>
+                </div>
+            </div>
+            <div className="rootheader4">
+                <center><p>Cocok untuk berbagai jenis tipe-tipe bisnis</p></center>
             </div>
             </Fragment>
         )
