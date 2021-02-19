@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+html,body{
+    margin: 0;
+    height: 100%;
+}
+.rootHeader{
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 30px auto;
+}
+.primaryroot{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    color: white;
+    background: rgb(94, 92, 92);
+    font-family: 'Nunito', sans-serif;
+}
+.childsecondary{
+
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+    grid-gap: 20px;
+    justify-self: center;
+    align-self: center;
+}
+.childsecondary1{
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+    justify-self: center;
+    align-self: center;
+}
+.secondroot{
+    display: grid;
+    grid-template-columns: 50px auto 50px 300px 200px;
+    background-image: url('background.jpeg');
+}
+.childsecondroot1{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    display: grid;
+    grid-template-rows: 50px auto;
+}
+.childsecondroot2{
+    grid-column-start: 4;
+    grid-column-end: 5;
+    display: grid;
+    grid-template-rows: 50px auto;
+    color: white;
+
+}
+.tes1{
+    align-self: center;
+    justify-self: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+    color: white;
+    font-size: 20px;
+    font-family: 'Nunito', sans-serif;
+    cursor: pointer;
+    
+}
+.tes1 span{
+    transition: 1s;
+}
+.tes2{
+    color: white;
+    display: grid;
+    align-self: center;
+    font-family: 'Nunito', sans-serif;
+    font-size: 25px;
+    text-shadow: 1px 2px 2px black;
+    justify-self: center;
+}
+.tes1 span:hover{
+    color:rgb(14, 14, 172);
+}
+.button{
+    cursor: pointer;
+    margin-top: 30px;
+    background: rgb(34, 166, 206);
+    transition: 1s;
+    padding: 10px;
+    border-radius: 100px;
+}
+.tes2 .button:hover{
+    background: rgb(16, 66, 82);
+}
+.containerlog{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.containerlog span{
+    align-self: center;
+    justify-self: center;
+    cursor: pointer;
+    font-family: 'Nunito';
+    transition: 1s;
+}
+.containerlog span:hover{
+    color: rgb(62, 91, 170);
+}

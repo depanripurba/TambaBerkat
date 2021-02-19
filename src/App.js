@@ -8,6 +8,7 @@ import Admin from "./componen/Admin";
 import Chat from "./componen/Chat";
 import Upload from "./componen/Upload";
 import Notfound from "./componen/Notfound";
+import Lander from "./componen/Lander";
 import {url} from "./Config/Redux"
 import {connect} from "react-redux"
 import firebase from "./Config/Firebase"
@@ -22,6 +23,7 @@ function App(props) {
 	     <Route path="/upload" component={Upload} />
        <Route path="/ChatMobile" component={ChatMobile} />
        <Route path="/Atk" component={Home} />
+       <Route path="/landing" component={Lander} />
        <Route path="/Admin" render={()=>{
          if(props.login === false){
            return(
